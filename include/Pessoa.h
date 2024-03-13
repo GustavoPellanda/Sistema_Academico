@@ -9,10 +9,8 @@ private:
     Universidade* Universidade_Filiada;
 
 public:
-    // Função construtora:
     Pessoa(int diaNascimento, int mesNascimento, int anoNascimento, const char* nome = "");
     Pessoa();
-    // Funcão destrutora:
     ~Pessoa();
 
     void inicializa(int diaNascimento, int mesNascimento, int anoNascimento, const char* nome = "");

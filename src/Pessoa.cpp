@@ -4,14 +4,12 @@
 
 using namespace std;
 
-// Inialização das variáveis de Pessoa:
 Pessoa::Pessoa(int diaNascimento, int mesNascimento, int anoNascimento, const char* nome) {
-    dia = diaNascimento;
-    mes = mesNascimento;
-    ano = anoNascimento;
-    idade = -1;
-    strcpy(Pessoa::nome, nome);
-    Universidade_Filiada = nullptr;
+    inicializa(diaNascimento, mesNascimento, anoNascimento, nome);
+}
+
+Pessoa::Pessoa(){
+    inicializa(-1, -1, -1);
 }
 
 Pessoa::~Pessoa() {
