@@ -10,6 +10,9 @@ private:
 
     Universidade Cambridge;
     Universidade Princeton;
+
+    Departamento Fisica;
+    Departamento Matematica;
 public:
     Principal();
     void Executar();

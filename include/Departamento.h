@@ -3,17 +3,20 @@
 
 class Departamento {
 private:
-    int id;
     char nome[100];
-    Universidade* pUniversidade; 
+    // int id;
+    // Universidade* pUniversidade; 
 public:
-    Departamento(int id);
+    // Departamento(int idDept, char* nomeDept, Universidade* pUniv);
+    Departamento();
     ~Departamento();
 
-    int getId();
-    void setNome(char* NomeDepartamento);
+    // void inicializa(int idDept, char* nomeDept, Universidade* pUniv);
+
+    void setNome(const char* NomeDepartamento);
     char* getNome();
-    void setUniversidade_Pertencente(Universidade* pUniv);
+    // void setUniversidade_Pertencente(Universidade* pUniv);
+    // int getId();
 };
 
 #endif

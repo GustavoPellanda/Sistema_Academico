@@ -2,13 +2,33 @@
 #include <cstring>
 #include <iostream>
 
-// Construtor:
 Universidade::Universidade(){
-    strcpy(nome, ""); // Inicializa o nome com um string vazia
-    for(int i = 0;  i < 50; i++) pDepartamento[i] == NULL; // Aterramento de ponteiros
+    pDepartamento = NULL;
 }
 
-// Destrutor:
+Universidade::~Universidade(){
+}
+
+void Universidade::setNome(const char* n){
+    strcpy(nome, n);
+}
+
+char* Universidade::getNome(){
+    return nome;
+}
+
+void Universidade::setDepartamento(Departamento* pDep){
+    pDepartamento = pDep;
+}
+
+
+
+/*
+Universidade::Universidade(){
+    strcpy(nome, ""); // Inicializa o nome com um string vazia
+    for(int i = 0;  i < 50; i++) pDepartamento[i] = NULL; // Aterramento de ponteiros
+}
+
 Universidade::~Universidade(){
 }
 
@@ -31,3 +51,4 @@ void Universidade::imprimeDepartamentos(){
         if(pDepAux != NULL) cout << pDepAux -> getNome()<<endl; // Adquire os nomes a partir do método existente na Classe Departamentos
     } 
 }
+*/

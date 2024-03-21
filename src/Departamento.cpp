@@ -1,27 +1,47 @@
 #include "Departamento.h"
+#include<cstring>
 
-Departamento::Departamento(int idDept, char* nomeDept, Universidade* pUniv){
-    id = idDept;
-    nome = "";
-    pUniv = NULL;
+using namespace std;
+
+// Departamento::Departamento(int idDept, char* nomeDept, Universidade* pUniv){
+//    inicializa(idDept, nomeDept, pUniv);
+// }
+
+// Departamento::Departamento(){
+//     inicializa(0, "", NULL);
+// }
+
+// Departamento::~Departamento(){
+    
+// }
+
+// void Departamento::inicializa(int idDept, char* nomeDept, Universidade* pUniv){
+//     id = idDept;
+//     strcpy(nome, nomeDept);
+//     pUniversidade = pUniv;
+// }
+
+Departamento::Departamento(){
+    strcpy(nome, "");
 }
 
 Departamento::~Departamento(){
     
 }
 
-Departamento::int getId(){
-    return id;
+
+void Departamento::setNome(const char* nomeDept){
+    strcpy(nome, nomeDept);
 }
 
-Departamento::void setNome(char* nomeDept){
-    nome = nomeDept;
-}
-
-Departamento::char* getNome(){
+char* Departamento::getNome(){
     return nome;
 }
 
-Departamento::setUniversidade_Pertencente(Universidade* pUniv){
-    pUniversidade = pUniv;
-}
+// int Departamento::getId(){
+//     return id;
+// }
+
+// void Departamento::setUniversidade_Pertencente(Universidade* pUniv){
+//     pUniversidade = pUniv;
+// }

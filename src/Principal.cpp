@@ -19,4 +19,10 @@ void Principal::Executar(){
 
     Newton.getUniversidade_Filiada();
     Einstein.getUniversidade_Filiada();
+
+    Fisica.setNome("Fisica");
+    Matematica.setNome("Matematica");
+
+    Cambridge.setDepartamento(&Fisica);
+    Princeton.setDepartamento(&Matematica);
 }
