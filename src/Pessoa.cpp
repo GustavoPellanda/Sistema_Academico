@@ -36,3 +36,11 @@ void Pessoa::setUniversidade_Filiada(Universidade* pesssoa_universidade){
 void Pessoa::getUniversidade_Filiada(){
     cout << nome << " trabalha para " << Universidade_Filiada->getNome() << endl;
 } // Note que é necessário o uso de um ponteiro para um objeto que está fora do escopo da classe Pessoa
+
+void Pessoa::setDepartamento_Filiado(Departamento* departamento_universidade){
+    Departamento_Filiado = departamento_universidade;
+}
+
+void Pessoa::getDepartamento_Filiado(){
+    cout << nome << " trabalha no departamento de " << Departamento_Filiado->getNome() << endl;
+}

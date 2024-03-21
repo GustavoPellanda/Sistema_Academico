@@ -13,7 +13,7 @@ public:
 
     // void inicializa(int idDept, char* nomeDept, Universidade* pUniv);
 
-    void setNome(const char* NomeDepartamento);
+    void setNome(const char* nomeDept);
     char* getNome();
     // void setUniversidade_Pertencente(Universidade* pUniv);
     // int getId();

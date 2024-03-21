@@ -25,4 +25,10 @@ void Principal::Executar(){
 
     Cambridge.setDepartamento(&Fisica);
     Princeton.setDepartamento(&Matematica);
+
+    Newton.setDepartamento_Filiado(&Fisica);
+    Einstein.setDepartamento_Filiado(&Matematica);
+
+    Newton.getDepartamento_Filiado();
+    Einstein.getDepartamento_Filiado();
 }

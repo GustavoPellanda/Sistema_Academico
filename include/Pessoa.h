@@ -7,6 +7,7 @@ private:
     int dia, mes, ano, idade;
     char nome[30];
     Universidade* Universidade_Filiada;
+    Departamento* Departamento_Filiado;
 
 public:
     Pessoa(int diaNascimento, int mesNascimento, int anoNascimento, const char* nome = "");
@@ -22,6 +23,9 @@ public:
     // Associa a classe Pessoa à classe Universidade:
     void setUniversidade_Filiada(Universidade* pesssoa_universidade);
     void getUniversidade_Filiada();
+
+    void setDepartamento_Filiado(Departamento* departamento_universidade);
+    void getDepartamento_Filiado();
 };
 
 #endif
