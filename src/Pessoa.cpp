@@ -30,6 +30,22 @@ void Pessoa::calculaIdade(int diaAtual, int mesAtual, int anoAtual){
     if (mesAtual < mes || (mesAtual == mes && diaAtual < dia)) idade--;
 }
 
+void Pessoa::setNome(char* nomePessoa){
+    strcpy(nome, nomePessoa);
+}
+    
+char* Pessoa::getNome(){
+    return nome;
+}
+
+int Pessoa::getIdade(){
+    return idade;
+}
+
+void Pessoa::printIdade(){
+    cout << nome << " possui " << idade << " anos de idade" << endl;
+}
+
 void Pessoa::setUniversidadeFiliada(Universidade* pUniv){
     pUniversidade = pUniv;
 } // Recebe um ponteiro para uma instância de Universidade para associá-la como uma universidade filiada à pessoa

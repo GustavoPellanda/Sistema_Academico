@@ -6,7 +6,6 @@ Principal::Principal(){
 }
 
 void Principal::Executar(){
-    int diaAtual = 21, mesAtual = 7, anoAtual = 2023;
     
     Cambridge.setNome("Cambridge");
     Princeton.setNome("Princeton");
@@ -16,6 +15,9 @@ void Principal::Executar(){
 
     Newton.calculaIdade(diaAtual, mesAtual, anoAtual);
     Einstein.calculaIdade(diaAtual, mesAtual, anoAtual);
+
+    Newton.printIdade();
+    Einstein.printIdade();
 
     Newton.printUniversidadeFiliada();
     Einstein.printUniversidadeFiliada();

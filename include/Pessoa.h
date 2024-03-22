@@ -17,8 +17,11 @@ public:
     void inicializa(int diaNascimento, int mesNascimento, int anoNascimento, const char* nomePessoa = "");
     void calculaIdade(int diaAtual, int mesAtual, int anoAtual);
     
-    void setNome(char* n);
+    void setNome(char* nomePessoa);
     char* getNome();
+
+    int getIdade();
+    void printIdade();
 
     void setUniversidadeFiliada(Universidade* pUniv);
     char* getUniversidadeFiliada();
