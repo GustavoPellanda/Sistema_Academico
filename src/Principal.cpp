@@ -23,8 +23,8 @@ void Principal::Executar(){
     Fisica.setNome("Fisica");
     Matematica.setNome("Matematica");
 
-    Cambridge.setDepartamento(&Fisica);
-    Princeton.setDepartamento(&Matematica);
+    Cambridge.setDepartamento(&Fisica, 0);
+    Princeton.setDepartamento(&Matematica, 1);
 
     Newton.setDepartamento_Filiado(&Fisica);
     Einstein.setDepartamento_Filiado(&Matematica);

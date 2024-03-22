@@ -5,14 +5,10 @@
 
 class Principal {
 private:
-    Pessoa Newton;
-    Pessoa Einstein;
-
-    Universidade Cambridge;
-    Universidade Princeton;
-
-    Departamento Fisica;
-    Departamento Matematica;
+    Pessoa Newton, Einstein;
+    Universidade Cambridge, Princeton;
+    Departamento Fisica, Matematica;
+    
 public:
     Principal();
     void Executar();
