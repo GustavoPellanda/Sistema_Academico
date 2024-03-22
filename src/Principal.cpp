@@ -33,4 +33,8 @@ void Principal::Executar(){
 
     Newton.printDepartamentoFiliado();
     Einstein.printDepartamentoFiliado();
+
+    Cambridge.imprimeDepartamentos();
+    Princeton.imprimeDepartamentos();
+
 }
