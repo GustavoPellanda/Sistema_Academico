@@ -11,14 +11,14 @@ void Principal::Executar(){
     Cambridge.setNome("Cambridge");
     Princeton.setNome("Princeton");
     
-    Newton.setUniversidade_Filiada(&Cambridge);
-    Einstein.setUniversidade_Filiada(&Princeton);
+    Newton.setUniversidadeFiliada(&Cambridge);
+    Einstein.setUniversidadeFiliada(&Princeton);
 
     Newton.calculaIdade(diaAtual, mesAtual, anoAtual);
     Einstein.calculaIdade(diaAtual, mesAtual, anoAtual);
 
-    Newton.getUniversidade_Filiada();
-    Einstein.getUniversidade_Filiada();
+    Newton.printUniversidadeFiliada();
+    Einstein.printUniversidadeFiliada();
 
     Fisica.setNome("Fisica");
     Matematica.setNome("Matematica");
@@ -26,9 +26,9 @@ void Principal::Executar(){
     Cambridge.setDepartamento(&Fisica, 0);
     Princeton.setDepartamento(&Matematica, 1);
 
-    Newton.setDepartamento_Filiado(&Fisica);
-    Einstein.setDepartamento_Filiado(&Matematica);
+    Newton.setDepartamentoFiliado(&Fisica);
+    Einstein.setDepartamentoFiliado(&Matematica);
 
-    Newton.getDepartamento_Filiado();
-    Einstein.getDepartamento_Filiado();
+    Newton.printDepartamentoFiliado();
+    Einstein.printDepartamentoFiliado();
 }
