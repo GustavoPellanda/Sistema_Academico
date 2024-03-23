@@ -3,11 +3,9 @@
 #include "Universidade.h" 
 
 class Pessoa { 
-private:
+protected:
     int dia, mes, ano, idade;
     char nome[30];
-    Universidade* pUniversidade;
-    Departamento* pDepartamento;
 
 public:
     Pessoa(int diaNascimento, int mesNascimento, int anoNascimento, const char* nomePessoa = "");
@@ -22,14 +20,6 @@ public:
 
     int getIdade();
     void printIdade();
-
-    void setUniversidadeFiliada(Universidade* pUniv);
-    char* getUniversidadeFiliada();
-    void printUniversidadeFiliada();
-
-    void setDepartamentoFiliado(Departamento* pDepto);
-    char* getDepartamentoFiliado();
-    void printDepartamentoFiliado();
 };
 
 #endif
