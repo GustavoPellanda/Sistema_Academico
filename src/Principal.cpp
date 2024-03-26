@@ -37,4 +37,5 @@ void Principal::Executar(){
     Cambridge.imprimeDepartamentos();
     Princeton.imprimeDepartamentos();
 
+    Gustavo.setRegistroAcademico(2090740);
 }

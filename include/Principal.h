@@ -3,6 +3,7 @@
 #include "Pessoa.h"
 #include "Professor.h"
 #include "Universidade.h"
+#include "Aluno.h"
 
 class Principal {
 private:
@@ -11,6 +12,7 @@ private:
     Professor Newton, Einstein;
     Universidade Cambridge, Princeton;
     Departamento Fisica, Matematica;
+    Aluno Gustavo;
 
 public:
     Principal();

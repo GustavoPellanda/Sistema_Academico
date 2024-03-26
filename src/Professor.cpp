@@ -3,7 +3,8 @@
 
 using namespace std;
 
-Professor::Professor(int diaNascimento, int mesNascimento, int anoNascimento, const char* nomePessoa):Pessoa(diaNascimento, mesNascimento, anoNascimento, nomePessoa){
+Professor::Professor(int diaNascimento, int mesNascimento, int anoNascimento, const char* nomePessoa)
+:Pessoa(diaNascimento, mesNascimento, anoNascimento, nomePessoa){
     pUniversidade = NULL;
     pDepartamento = NULL;
 }
