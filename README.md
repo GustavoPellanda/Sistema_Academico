@@ -1,2 +1,2 @@
 # Sistema_Academico
-Programa criado acompanhando as aulas de Técnicas de Programação da UTFPR Curitiba.
+O programa foi desenvolvido com base nas aulas de Técnicas de Programação da UTFPR Curitiba, ministradas pelo Professor Jean Marcelo Simão.
