@@ -19,26 +19,26 @@ Professor::~Professor(){
     pDepartamento = NULL;
 }
 
-void Professor::setUniversidadeFiliada(Universidade* pUniv){
+void Professor::setUniversidade(Universidade* pUniv){
     pUniversidade = pUniv;
 }
 
-const char* Professor::getUniversidadeFiliada(){
+const char* Professor::getUniversidade(){
     return pUniversidade->getNome();
 }
 
-void Professor::printUniversidadeFiliada(){
-    cout << nome << " trabalha para " << getUniversidadeFiliada() << endl;
+void Professor::imprimeUniversidade(){
+    cout << nome << " trabalha para " << getUniversidade() << endl;
 }
 
-void Professor::setDepartamentoFiliado(Departamento* pDepto){
+void Professor::setDepartamento(Departamento* pDepto){
     pDepartamento = pDepto;
 }
 
-const char* Professor::getDepartamentoFiliado(){
+const char* Professor::getDepartamento(){
     return pDepartamento->getNome();
 }
 
-void Professor::printDepartamentoFiliado(){
-    cout << nome << " trabalha no departamento de " << getDepartamentoFiliado() << endl;
+void Professor::imprimeDepartamento(){
+    cout << nome << " trabalha no departamento de " << getDepartamento() << endl;
 }

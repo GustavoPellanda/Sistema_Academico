@@ -11,17 +11,17 @@ void Principal::Executar(){
     Cambridge.setNome("Cambridge");
     Princeton.setNome("Princeton");
     
-    Newton.setUniversidadeFiliada(&Cambridge);
-    Einstein.setUniversidadeFiliada(&Princeton);
+    Newton.setUniversidade(&Cambridge);
+    Einstein.setUniversidade(&Princeton);
 
     Newton.calculaIdade(diaAtual, mesAtual, anoAtual);
     Einstein.calculaIdade(diaAtual, mesAtual, anoAtual);
 
-    Newton.printIdade();
-    Einstein.printIdade();
+    Newton.imprimeIdade();
+    Einstein.imprimeIdade();
 
-    Newton.printUniversidadeFiliada();
-    Einstein.printUniversidadeFiliada();
+    Newton.imprimeUniversidade();
+    Einstein.imprimeUniversidade();
 
     FisicaCambridge.setNome("FisicaCambridge");
     MatematicaCambridge.setNome("MatematicaCambridge");
@@ -34,14 +34,14 @@ void Principal::Executar(){
     Princeton.setDepartamento(&FisicaPrinceton);
     Princeton.setDepartamento(&MatematicaPrinceton);
 
-    Newton.setDepartamentoFiliado(&FisicaCambridge);
-    Einstein.setDepartamentoFiliado(&FisicaPrinceton);
+    Newton.setDepartamento(&FisicaCambridge);
+    Einstein.setDepartamento(&FisicaPrinceton);
 
-    Newton.printDepartamentoFiliado();
-    Einstein.printDepartamentoFiliado();
+    Newton.imprimeDepartamento();
+    Einstein.imprimeDepartamento();
 
-    Cambridge.imprimeDepartamentos();
-    Princeton.imprimeDepartamentos();
+    Cambridge.listaDepartamentos();
+    Princeton.listaDepartamentos();
 
     Gustavo.setRegistroAcademico(2090740);
 
@@ -60,5 +60,5 @@ void Principal::Executar(){
     CompSci.incluirDisciplina(&RedesNeurais);
     CompSci.incluirDisciplina(&SistemasInteligentes);
 
-    CompSci.listarDisciplinas();
+    CompSci.listaDisciplinas();
 }

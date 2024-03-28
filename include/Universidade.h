@@ -19,7 +19,7 @@ public:
     char* getNome();
     
     void setDepartamento(Departamento* pDep);
-    void imprimeDepartamentos();
+    void listaDepartamentos();
 };
 
 #endif

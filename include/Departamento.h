@@ -25,7 +25,7 @@ public:
     Universidade* getUniversidade();
 
     void incluirDisciplina(Disciplina* pDis);
-    void listarDisciplinas();
+    void listaDisciplinas();
 };
 
 #endif

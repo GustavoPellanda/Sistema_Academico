@@ -19,7 +19,7 @@ public:
     char* getNome();
 
     int getIdade();
-    void printIdade();
+    void imprimeIdade();
 };
 
 #endif

@@ -40,7 +40,7 @@ void Departamento::incluirDisciplina(Disciplina* pDis) {
 }
 
 
-void Departamento::listarDisciplinas()  {
+void Departamento::listaDisciplinas()  {
     std::cout << "Disciplinas do departamento " << nome << ":\n";
     Disciplina* pAtual = pPrimeiraDisciplina;
     while (pAtual) {

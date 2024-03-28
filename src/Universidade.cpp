@@ -24,7 +24,7 @@ void Universidade::setDepartamento(Departamento* pDep){
     pListaDepartamentos.push_back(pDep);
 } // Insere um novo ponteiro para um departamento na lista de ponteiros de departamentos
 
-void Universidade::imprimeDepartamentos(){
+void Universidade::listaDepartamentos(){
     Departamento* pDepAux = NULL;
     int comprimentoLista = (int) pListaDepartamentos.size();
     for(int i = 0;  i < comprimentoLista; i++){

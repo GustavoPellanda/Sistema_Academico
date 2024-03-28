@@ -13,13 +13,13 @@ public:
     Professor();
     ~Professor();
     
-    void setUniversidadeFiliada(Universidade* pUniv);
-    const char* getUniversidadeFiliada();
-    void printUniversidadeFiliada();
+    void setUniversidade(Universidade* pUniv);
+    const char* getUniversidade();
+    void imprimeUniversidade();
 
-    void setDepartamentoFiliado(Departamento* pDepto);
-    const char* getDepartamentoFiliado();
-    void printDepartamentoFiliado();
+    void setDepartamento(Departamento* pDepto);
+    const char* getDepartamento();
+    void imprimeDepartamento();
 };
 
 #endif

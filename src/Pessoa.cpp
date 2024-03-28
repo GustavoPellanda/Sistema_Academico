@@ -41,6 +41,6 @@ int Pessoa::getIdade(){
     return idade;
 }
 
-void Pessoa::printIdade(){
+void Pessoa::imprimeIdade(){
     cout << nome << " possui " << idade << " anos de idade" << endl;
 }
