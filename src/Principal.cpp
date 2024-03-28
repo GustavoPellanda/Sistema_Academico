@@ -1,12 +1,13 @@
 #include "Principal.h"
 
 Principal::Principal(){
-    Newton.inicializa(4, 3, 1643, "Newton");
-    Einstein.inicializa(14, 1, 1879, "Einstein");
 }
 
 void Principal::Executar(){
     
+    Newton.inicializa(4, 3, 1643, "Newton");
+    Einstein.inicializa(14, 1, 1879, "Einstein");
+
     Cambridge.setNome("Cambridge");
     Princeton.setNome("Princeton");
     
@@ -26,6 +27,7 @@ void Principal::Executar(){
     MatematicaCambridge.setNome("MatematicaCambridge");
     FisicaPrinceton.setNome("FisicaPrinceton");
     MatematicaPrinceton.setNome("MatematicaPrinceton");
+    CompSci.setNome("CompSci");
 
     Cambridge.setDepartamento(&FisicaCambridge);
     Cambridge.setDepartamento(&MatematicaCambridge);
@@ -42,4 +44,16 @@ void Principal::Executar(){
     Princeton.imprimeDepartamentos();
 
     Gustavo.setRegistroAcademico(2090740);
+
+    CircuitosDigitais.setNome("CircuitosDigitais");
+    SistemasEmbarcados.setNome("SistemasEmbarcados");
+    RedesNeurais.setNome("RedesNeurais");
+    SistemasInteligentes.setNome("SistemasInteligentes");
+
+    CompSci.incluirDisciplina(&CircuitosDigitais);
+    CompSci.incluirDisciplina(&SistemasEmbarcados);
+    CompSci.incluirDisciplina(&RedesNeurais);
+    CompSci.incluirDisciplina(&SistemasInteligentes);
+
+    CompSci.listarDisciplinas();
 }

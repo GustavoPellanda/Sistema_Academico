@@ -1,20 +1,31 @@
 #ifndef DEPARTAMENTO_H
 #define DEPARTAMENTO_H 
+#include "disciplina.h"
 
 class Universidade;
 
 class Departamento {
 private:
     char nome[100];
-    Universidade* pUniversidade; 
+
+    Universidade* pUniversidade;
+
+    // Lista de disciplinas para cada departamento:
+    Disciplina* pPrimeiraDisciplina;
+    Disciplina* pUltimaDisciplina;
+
 public:
     Departamento();
     ~Departamento();
 
     void setNome(const char* nomeDept);
-    char* getNome();
+    const char* getNome();
 
-    void setUniversidadePertencente(Universidade* pUniv);
+    void setUniversidade(Universidade* pUniv);
+    Universidade* getUniversidade();
+
+    void incluirDisciplina(Disciplina* pDis);
+    void listarDisciplinas();
 };
 
 #endif

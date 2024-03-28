@@ -8,7 +8,9 @@ using namespace std;
 class Universidade {
 private:
     char nome[30];
+    
     vector <Departamento*> pListaDepartamentos;
+
 public:
     Universidade();
     ~Universidade();

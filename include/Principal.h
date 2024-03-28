@@ -11,8 +11,9 @@ private:
 
     Professor Newton, Einstein;
     Universidade Cambridge, Princeton;
-    Departamento FisicaCambridge, MatematicaCambridge,FisicaPrinceton, MatematicaPrinceton;
+    Departamento FisicaCambridge, MatematicaCambridge,FisicaPrinceton, MatematicaPrinceton, CompSci;
     Aluno Gustavo;
+    Disciplina CircuitosDigitais, SistemasEmbarcados, RedesNeurais, SistemasInteligentes;
 
 public:
     Principal();

@@ -23,7 +23,7 @@ void Professor::setUniversidadeFiliada(Universidade* pUniv){
     pUniversidade = pUniv;
 }
 
-char* Professor::getUniversidadeFiliada(){
+const char* Professor::getUniversidadeFiliada(){
     return pUniversidade->getNome();
 }
 
@@ -35,7 +35,7 @@ void Professor::setDepartamentoFiliado(Departamento* pDepto){
     pDepartamento = pDepto;
 }
 
-char* Professor::getDepartamentoFiliado(){
+const char* Professor::getDepartamentoFiliado(){
     return pDepartamento->getNome();
 }
 
