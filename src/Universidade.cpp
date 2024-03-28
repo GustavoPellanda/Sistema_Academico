@@ -24,13 +24,16 @@ void Universidade::setDepartamento(Departamento* pDep){
     pListaDepartamentos.push_back(pDep);
 } // Insere um novo ponteiro para um departamento na lista de ponteiros de departamentos
 
-void Universidade::listaDepartamentos(){
+void Universidade::listaDepartamentos() {
     Departamento* pDepAux = NULL;
     int comprimentoLista = (int) pListaDepartamentos.size();
-    for(int i = 0;  i < comprimentoLista; i++){
+    cout << "Lista de Departamentos da Universidade " << getNome() << ":" << endl;
+    for (int i = 0; i < comprimentoLista; i++) {
         pDepAux = pListaDepartamentos[i];
-        if(pDepAux != NULL) cout << pDepAux -> getNome()<<endl;
-    } 
+        if (pDepAux != NULL) {
+            cout << "- " << pDepAux->getNome() << endl;
+        }
+    }
 } // Adquire os nomes a partir do método existente na Classe Departamentos
 
 // push_back() e size() são funções para operação de listas da biblioteca vector
