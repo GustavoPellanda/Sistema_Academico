@@ -22,14 +22,18 @@ void Principal::Executar(){
     Newton.printUniversidadeFiliada();
     Einstein.printUniversidadeFiliada();
 
-    Fisica.setNome("Fisica");
-    Matematica.setNome("Matematica");
+    FisicaCambridge.setNome("FisicaCambridge");
+    MatematicaCambridge.setNome("MatematicaCambridge");
+    FisicaPrinceton.setNome("FisicaPrinceton");
+    MatematicaPrinceton.setNome("MatematicaPrinceton");
 
-    Cambridge.setDepartamento(&Fisica, 0);
-    Princeton.setDepartamento(&Matematica, 1);
+    Cambridge.setDepartamento(&FisicaCambridge);
+    Cambridge.setDepartamento(&MatematicaCambridge);
+    Princeton.setDepartamento(&FisicaPrinceton);
+    Princeton.setDepartamento(&MatematicaPrinceton);
 
-    Newton.setDepartamentoFiliado(&Fisica);
-    Einstein.setDepartamentoFiliado(&Matematica);
+    Newton.setDepartamentoFiliado(&FisicaCambridge);
+    Einstein.setDepartamentoFiliado(&FisicaPrinceton);
 
     Newton.printDepartamentoFiliado();
     Einstein.printDepartamentoFiliado();

@@ -11,7 +11,7 @@ private:
 
     Professor Newton, Einstein;
     Universidade Cambridge, Princeton;
-    Departamento Fisica, Matematica;
+    Departamento FisicaCambridge, MatematicaCambridge,FisicaPrinceton, MatematicaPrinceton;
     Aluno Gustavo;
 
 public:
