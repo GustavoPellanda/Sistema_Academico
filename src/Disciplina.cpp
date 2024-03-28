@@ -31,8 +31,8 @@ const char* Disciplina::getNome() {
 }
 
 void Disciplina::setDepartamento(Departamento* pDep) {
-    pDepartamento = pDep;
-}
+    pDep->incluirDisciplina(this);
+} // Utiliza o método da Classe Departamento para incluir a disciplina no departamento automaticamente
 
 Departamento* Disciplina::getDepartamento() {
     return pDepartamento;

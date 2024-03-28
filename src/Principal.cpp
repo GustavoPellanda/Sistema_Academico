@@ -55,10 +55,5 @@ void Principal::Executar(){
     RedesNeurais.setDepartamento(&CompSci);
     SistemasInteligentes.setDepartamento(&CompSci);
 
-    CompSci.incluirDisciplina(&CircuitosDigitais);
-    CompSci.incluirDisciplina(&SistemasEmbarcados);
-    CompSci.incluirDisciplina(&RedesNeurais);
-    CompSci.incluirDisciplina(&SistemasInteligentes);
-
     CompSci.listaDisciplinas();
 }
