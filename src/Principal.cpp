@@ -50,6 +50,11 @@ void Principal::Executar(){
     RedesNeurais.setNome("RedesNeurais");
     SistemasInteligentes.setNome("SistemasInteligentes");
 
+    CircuitosDigitais.setDepartamento(&CompSci);
+    SistemasEmbarcados.setDepartamento(&CompSci);
+    RedesNeurais.setDepartamento(&CompSci);
+    SistemasInteligentes.setDepartamento(&CompSci);
+
     CompSci.incluirDisciplina(&CircuitosDigitais);
     CompSci.incluirDisciplina(&SistemasEmbarcados);
     CompSci.incluirDisciplina(&RedesNeurais);
