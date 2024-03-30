@@ -29,16 +29,16 @@ Universidade* Departamento::getUniversidade() {
 }
 
 void Departamento::incluirDisciplina(Disciplina* pDis) {
-    if (pPrimeiraDisciplina == NULL) { // Lista vazia
+    if(pPrimeiraDisciplina == NULL) { // Lista vazia
         pPrimeiraDisciplina = pDis;
         pUltimaDisciplina = pDis;
-        return;
     }
-
-    pUltimaDisciplina->setProximaDisciplina(pDis); // Método da classe disciplina
-    pUltimaDisciplina = pDis;
+    else {
+        pUltimaDisciplina->setProximaDisciplina(pDis); // Disciplina a ser adcionada se torna a próxima disciplina da última disciplina da lista
+        pDis->setAnteriorDisciplina(pUltimaDisciplina); // Última disciplina da lista é colocada como anterior a disciplina a ser adcionada
+        pUltimaDisciplina = pDis; // Disciplina a ser adcionada é colocada como última da lista
+    }
 }
-
 
 void Departamento::listaDisciplinas()  {
     std::cout << "Disciplinas do departamento " << nome << ":\n";
@@ -48,3 +48,13 @@ void Departamento::listaDisciplinas()  {
         pAtual = pAtual->getProximaDisciplina();
     }
 }
+
+void Departamento::listaDisciplinasInvertido() {
+    std::cout << "Disciplinas do departamento " << nome << " em ordem invertida:\n";
+    Disciplina* pAtual = pUltimaDisciplina; // Começa a partir da última disciplina
+    while (pAtual != NULL) {
+        std::cout << " - " << pAtual->getNome() << "\n";
+        pAtual = pAtual->getAnteriorDisciplina(); // Move para a disciplina anterior na lista
+    }
+}
+/* Está imprimindo espaços vazios depois da lista. Eu não sei por quê kkkkk */

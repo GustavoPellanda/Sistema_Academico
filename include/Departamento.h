@@ -26,6 +26,7 @@ public:
 
     void incluirDisciplina(Disciplina* pDis);
     void listaDisciplinas();
+    void listaDisciplinasInvertido();
 };
 
 #endif

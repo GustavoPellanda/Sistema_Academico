@@ -1,4 +1,5 @@
 #include "disciplina.h"
+#include "Departamento.h"
 #include <cstring>
 
 Disciplina::Disciplina() {
@@ -44,4 +45,12 @@ void Disciplina::setProximaDisciplina(Disciplina* pProxDisc) {
 
 Disciplina* Disciplina::getProximaDisciplina() {
     return pProximaDisciplina;
+}
+
+void Disciplina::setAnteriorDisciplina(Disciplina* pAnteDisc) {
+    pAnteriorDisciplina = pAnteDisc;
+}
+
+Disciplina* Disciplina::getAnteriorDisciplina() {
+    return pAnteriorDisciplina;
 }

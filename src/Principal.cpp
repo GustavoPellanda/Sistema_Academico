@@ -56,4 +56,5 @@ void Principal::Executar(){
     SistemasInteligentes.setDepartamento(&CompSci);
 
     CompSci.listaDisciplinas();
+    CompSci.listaDisciplinasInvertido();
 }

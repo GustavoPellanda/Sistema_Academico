@@ -13,6 +13,7 @@ private:
 
     // Próxima disciplina da lista:
     Disciplina* pProximaDisciplina;
+    Disciplina* pAnteriorDisciplina;
 
 public:
     Disciplina();
@@ -29,6 +30,9 @@ public:
 
     void setProximaDisciplina(Disciplina* pProxDisc);
     Disciplina* getProximaDisciplina();
+
+    void setAnteriorDisciplina(Disciplina* pAnteDisc);
+    Disciplina* getAnteriorDisciplina();
 };
 
 #endif
