@@ -1,5 +1,6 @@
 #ifndef DISCIPLINA_H
 #define DISCIPLINA_H
+#include "Aluno.h"
 
 class Departamento;
 
@@ -14,6 +15,12 @@ private:
     // Próxima disciplina da lista:
     Disciplina* pProximaDisciplina;
     Disciplina* pAnteriorDisciplina;
+
+    // Lista de alunos da disciplina:
+    int numeroAlunos;
+    int countAlunos;
+    Aluno* pPrimeiroAluno;
+    Aluno* pUltimoAluno;
 
 public:
     Disciplina();
@@ -33,6 +40,10 @@ public:
 
     void setAnteriorDisciplina(Disciplina* pAnteDisc);
     Disciplina* getAnteriorDisciplina();
+
+    void incluirAluno(Aluno* pAlu);
+    void listaAlunos();
+    void listaAlunosInvertido();
 };
 
 #endif

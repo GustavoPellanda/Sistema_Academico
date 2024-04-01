@@ -2,6 +2,8 @@
 #include <cstring>
 #include <iostream>
 
+using namespace std;
+
 Departamento::Departamento() {
     pPrimeiraDisciplina = NULL;
     pUltimaDisciplina = NULL;
@@ -41,19 +43,19 @@ void Departamento::incluirDisciplina(Disciplina* pDis) {
 }
 
 void Departamento::listaDisciplinas()  {
-    std::cout << "Disciplinas do departamento " << nome << ":\n";
+    cout << "Disciplinas do departamento " << nome << ":\n";
     Disciplina* pAtual = pPrimeiraDisciplina;
-    while (pAtual) {
-        std::cout << " - " << pAtual->getNome() << "\n";
+    while (pAtual != NULL) {
+        cout << " - " << pAtual->getNome() << "\n";
         pAtual = pAtual->getProximaDisciplina();
     }
 }
 
 void Departamento::listaDisciplinasInvertido() {
-    std::cout << "Disciplinas do departamento " << nome << " em ordem invertida:\n";
+    cout << "Disciplinas do departamento " << nome << " em ordem invertida:\n";
     Disciplina* pAtual = pUltimaDisciplina; // Começa a partir da última disciplina
     while (pAtual != NULL) {
-        std::cout << " - " << pAtual->getNome() << "\n";
+        cout << " - " << pAtual->getNome() << "\n";
         pAtual = pAtual->getAnteriorDisciplina(); // Move para a disciplina anterior na lista
     }
 }

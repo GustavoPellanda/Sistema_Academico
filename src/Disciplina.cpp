@@ -1,11 +1,16 @@
-#include "disciplina.h"
+#include "Disciplina.h"
 #include "Departamento.h"
+#include <iostream>
 #include <cstring>
+
+using namespace std;
 
 Disciplina::Disciplina() {
     id = -1;
     nome[0] = '\0';
     areaConhecimento[0] = '\0';
+    numeroAlunos = 45; // Quantidade default de alunos por matéria
+    countAlunos = 0;
     pDepartamento = NULL;
     pProximaDisciplina = NULL;
 }
@@ -32,6 +37,7 @@ const char* Disciplina::getNome() {
 }
 
 void Disciplina::setDepartamento(Departamento* pDep) {
+    pDepartamento = pDep;
     pDep->incluirDisciplina(this);
 } // Utiliza o método da Classe Departamento para incluir a disciplina no departamento automaticamente
 
@@ -53,4 +59,16 @@ void Disciplina::setAnteriorDisciplina(Disciplina* pAnteDisc) {
 
 Disciplina* Disciplina::getAnteriorDisciplina() {
     return pAnteriorDisciplina;
+}
+
+void Disciplina::incluirAluno(Aluno* pAlu) {
+    // Fazer
+}
+
+void Disciplina::listaAlunos() {
+    // Fazer
+}
+
+void Disciplina::listaAlunosInvertido() {
+    // Fazer
 }
