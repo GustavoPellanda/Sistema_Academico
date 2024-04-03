@@ -14,9 +14,20 @@ Disciplina::Disciplina() {
     pProximaDisciplina = NULL;
 }
 
-Disciplina::~Disciplina() {
-    pDepartamento = NULL;
-    pProximaDisciplina = NULL;
+Disciplina::~Disciplina()
+{
+    ElementoAluno* pAux = NULL;
+    pAux = pPrimeiroElementoAluno;
+
+    // Navega pela lista de alunos e os deleta
+    while(NULL != pPrimeiroElementoAluno){
+        pPrimeiroElementoAluno = pPrimeiroElementoAluno->getProximoAluno();
+        delete pAux;
+        pAux = pPrimeiroElementoAluno;
+    }
+
+    pDeptoAssociado = NULL;
+    pUltimoAluno = NULL;
 }
 
 void Disciplina::setId(int idDis) {
@@ -67,18 +78,20 @@ void Disciplina::incluirAluno(Aluno* pAlu) {
         return;
     }
 
-    ElementoAluno* pAluAux = NULL;
-    pAluAux = new ElementoAluno();
-    pAluAux->setAluno(pAlu); // Cópia do aluno a ser uncluído para um ponteiro auxiliar
+    ElementoAluno* pAuxElemento = new ElementoAluno();
+    Aluno* pAuxAluno = new Aluno();
+    
+    *pAuxAluno = *pAuxElemento;
+    pAuxElemento->setAluno(pAuxAluno);
 
     if(pPrimeiroAluno == NULL){ // Lista vazia
-        pPrimeiroAluno = pAluAux;
-        pUltimoAluno= pAluAux;
+        pPrimeiroAluno = pAuxElemento;
+        pUltimoAluno= pAuxElemento;
     }
     else{
-        pUltimoAluno->setProximoAluno(pAluAux);
-        pAluAux->setAnteriorAluno(pUltimoAluno);
-        pUltimoAluno = pAluAux;
+        pUltimoAluno->setProximoAluno(pAuxElemento);
+        pAuxElemento->setAnteriorAluno(pUltimoAluno);
+        pUltimoAluno = pAuxElemento;
     }
 
     countAlunos++;

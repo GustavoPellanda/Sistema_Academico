@@ -1,6 +1,5 @@
-#ifndef ALUNO_H
-#define ALUNO_H
-
+#ifndef ELEMENTOALUNO_H
+#define ELEMENTOALUNO_H
 #include "Aluno.h"
 
 // Classe utilizada para representar um elemento da Classe Aluno inserido em uma lista

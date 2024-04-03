@@ -1,6 +1,5 @@
 #ifndef ALUNO_H
 #define ALUNO_H
-
 #include "Pessoa.h"
 
 class Aluno : public Pessoa {

@@ -1,7 +1,7 @@
 #ifndef DEPARTAMENTO_H
 #define DEPARTAMENTO_H 
-#include "Disciplina.h"
 
+class Disciplina;
 class Universidade;
 
 class Departamento {
