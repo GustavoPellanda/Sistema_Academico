@@ -1,4 +1,4 @@
-#include "Aluno.h"
+#include "ElementoAluno.h"
 
 ElementoAluno::ElementoAluno() {
     pAluno = NULL;

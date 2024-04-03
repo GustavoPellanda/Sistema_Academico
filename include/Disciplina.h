@@ -1,6 +1,6 @@
 #ifndef DISCIPLINA_H
 #define DISCIPLINA_H
-#include "Aluno.h"
+#include "ElementoAluno.h"
 
 class Departamento;
 
@@ -19,8 +19,8 @@ private:
     // Lista de alunos da disciplina:
     int numeroAlunos;
     int countAlunos;
-    Aluno* pPrimeiroAluno;
-    Aluno* pUltimoAluno;
+    ElementoAluno* pPrimeiroAluno;
+    ElementoAluno* pUltimoAluno;
 
 public:
     Disciplina();

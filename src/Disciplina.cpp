@@ -1,5 +1,4 @@
 #include "Disciplina.h"
-#include "Departamento.h"
 #include <iostream>
 #include <cstring>
 
@@ -9,7 +8,7 @@ Disciplina::Disciplina() {
     id = -1;
     nome[0] = '\0';
     areaConhecimento[0] = '\0';
-    numeroAlunos = 45; // Quantidade default de alunos por matéria
+    numeroAlunos = 0; // Quantidade default de alunos por matéria
     countAlunos = 0;
     pDepartamento = NULL;
     pProximaDisciplina = NULL;
@@ -62,7 +61,27 @@ Disciplina* Disciplina::getAnteriorDisciplina() {
 }
 
 void Disciplina::incluirAluno(Aluno* pAlu) {
-    // Fazer
+    if(pAlu == NULL) return;
+    if(countAlunos > numeroAlunos){
+        cout << "Limite de alunos na turma já atingido!" << endl;
+        return;
+    }
+
+    ElementoAluno* pAluAux = NULL;
+    pAluAux = new ElementoAluno();
+    pAluAux->setAluno(pAlu); // Cópia do aluno a ser uncluído para um ponteiro auxiliar
+
+    if(pPrimeiroAluno == NULL){ // Lista vazia
+        pPrimeiroAluno = pAluAux;
+        pUltimoAluno= pAluAux;
+    }
+    else{
+        pUltimoAluno->setProximoAluno(pAluAux);
+        pAluAux->setAnteriorAluno(pUltimoAluno);
+        pUltimoAluno = pAluAux;
+    }
+
+    countAlunos++;
 }
 
 void Disciplina::listaAlunos() {
