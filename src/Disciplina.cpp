@@ -8,17 +8,15 @@ Disciplina::Disciplina() {
     id = -1;
     nome[0] = '\0';
     areaConhecimento[0] = '\0';
-    numeroAlunos = 0; // Quantidade default de alunos por matéria
-    countAlunos = 0;
     pDepartamento = NULL;
     pProximaDisciplina = NULL;
+    pAnteriorDisciplina = NULL;
+    pListaAlunos = NULL;
 }
 
 Disciplina::~Disciplina()
 {
-    pListaAlunos = NULL;
-    pDeptoAssociado = NULL;
-    pUltimoAluno = NULL;
+    delete pListaAlunos;
 }
 
 void Disciplina::setId(int idDis) {
@@ -63,13 +61,13 @@ Disciplina* Disciplina::getAnteriorDisciplina() {
 }
 
 void Disciplina::incluirAluno(Aluno* pAlu){
-    pListaAlunos.incluirAluno(pAlu);
+    pListaAlunos->incluirAluno(pAlu);
 }
 
 void Disciplina::listarAlunos(){
-    pListaAlunos.listarAlunos();
+    pListaAlunos->listarAlunos();
 }
 
 void Disciplina::listarAlunosInvertido(){
-    pListaAlunos.listarAlunosInvertido();
+    pListaAlunos->listarAlunosInvertido();
 }
