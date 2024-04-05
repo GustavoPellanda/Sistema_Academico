@@ -36,6 +36,10 @@ public:
 
     void setAnteriorDisciplina(Disciplina* pAnteDisc);
     Disciplina* getAnteriorDisciplina();
+
+    void incluirAluno(Aluno* pAlu);
+    void listarAlunos();
+    void listarAlunosInvertido();
 };
 
 #endif

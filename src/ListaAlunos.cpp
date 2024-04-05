@@ -1,5 +1,6 @@
 #include "ListaAlunos.h"
-#include "string.h"
+#include <string>
+#include <iostream>
 
 ListaAlunos::ListaAlunos(int numAlu, const char* nomeAlu){
     countAlunos = 0;
@@ -24,7 +25,7 @@ ListaAlunos::~ListaAlunos(){
     pUltimoAluno = NULL;
 }
 
-void Disciplina::incluirAluno(Aluno* pAlu) {
+void ListaAlunos::incluirAluno(Aluno* pAlu) {
     if(pAlu == NULL) return;
     if(countAlunos >= numeroAlunos){
         cout << "Limite de alunos na turma já atingido!" << endl;
@@ -48,10 +49,10 @@ void Disciplina::incluirAluno(Aluno* pAlu) {
     countAlunos++;
 }
 
-void Disciplina::listarAlunos() {
+void ListaAlunos::listarAlunos() {
     // Fazer
 }
 
-void Disciplina::listarAlunosInvertido() {
+void ListaAlunos::listarAlunosInvertido() {
     // Fazer
 }

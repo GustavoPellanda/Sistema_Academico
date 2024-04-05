@@ -61,3 +61,15 @@ void Disciplina::setAnteriorDisciplina(Disciplina* pAnteDisc) {
 Disciplina* Disciplina::getAnteriorDisciplina() {
     return pAnteriorDisciplina;
 }
+
+void Disciplina::incluirAluno(Aluno* pAlu){
+    pListaAlunos.incluirAluno(pAlu);
+}
+
+void Disciplina::listarAlunos(){
+    pListaAlunos.listarAlunos();
+}
+
+void Disciplina::listarAlunosInvertido(){
+    pListaAlunos.listarAlunosInvertido();
+}

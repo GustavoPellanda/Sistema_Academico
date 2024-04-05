@@ -4,6 +4,8 @@
 #include "Professor.h"
 #include "Universidade.h"
 #include "Aluno.h"
+#include "Departamento.h"
+#include "Disciplina.h"
 
 class Principal {
 private:
