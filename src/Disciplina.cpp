@@ -16,16 +16,7 @@ Disciplina::Disciplina() {
 
 Disciplina::~Disciplina()
 {
-    ElementoAluno* pAux = NULL;
-    pAux = pPrimeiroElementoAluno;
-
-    // Navega pela lista de alunos e os deleta
-    while(NULL != pPrimeiroElementoAluno){
-        pPrimeiroElementoAluno = pPrimeiroElementoAluno->getProximoAluno();
-        delete pAux;
-        pAux = pPrimeiroElementoAluno;
-    }
-
+    pListaAlunos = NULL;
     pDeptoAssociado = NULL;
     pUltimoAluno = NULL;
 }
@@ -69,38 +60,4 @@ void Disciplina::setAnteriorDisciplina(Disciplina* pAnteDisc) {
 
 Disciplina* Disciplina::getAnteriorDisciplina() {
     return pAnteriorDisciplina;
-}
-
-void Disciplina::incluirAluno(Aluno* pAlu) {
-    if(pAlu == NULL) return;
-    if(countAlunos > numeroAlunos){
-        cout << "Limite de alunos na turma já atingido!" << endl;
-        return;
-    }
-
-    ElementoAluno* pAuxElemento = new ElementoAluno();
-    Aluno* pAuxAluno = new Aluno();
-    
-    *pAuxAluno = *pAuxElemento;
-    pAuxElemento->setAluno(pAuxAluno);
-
-    if(pPrimeiroAluno == NULL){ // Lista vazia
-        pPrimeiroAluno = pAuxElemento;
-        pUltimoAluno= pAuxElemento;
-    }
-    else{
-        pUltimoAluno->setProximoAluno(pAuxElemento);
-        pAuxElemento->setAnteriorAluno(pUltimoAluno);
-        pUltimoAluno = pAuxElemento;
-    }
-
-    countAlunos++;
-}
-
-void Disciplina::listaAlunos() {
-    // Fazer
-}
-
-void Disciplina::listaAlunosInvertido() {
-    // Fazer
 }

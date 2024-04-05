@@ -1,25 +1,27 @@
-#ifndef ELEMENTOALUNO_H
-#define ELEMENTOALUNO_H
-#include "Aluno.h"
+#include "ElementoAluno.h"
 
-// Classe utilizada para representar um elemento da Classe Aluno inserido em uma lista
-class ElementoAluno {
-private:
-    Aluno* pAluno;
-    Aluno* pProximoAluno;
-    Aluno* pAnteriorAluno;
-public:
-    ElementoAluno();
-    ~ElementoAluno();
+ElementoAluno::ElementoAluno() {
+    pAluno = NULL;
+    pProximoAluno = NULL;
+    pAnteriorAluno = NULL;
+}
+
+ElementoAluno::~ElementoAluno() {
     
-    void setAluno(Aluno* pAlu);
-    Aluno* getAluno();
+}
 
-    void setProximoAluno(Aluno* proxAlu);
-    Aluno* getProximoAluno();
+void ElementoAluno::setProximoAluno(Aluno* proxAlu) {
+    pProximoAluno = proxAlu;
+}
 
-    void setAnteriorAluno(Aluno* anteAlu);
-    Aluno* getAnteriorAluno();
-};
+Aluno* ElementoAluno::getProximoAluno() {
+    return pProximoAluno;
+}
 
-#endif
+void ElementoAluno::setAnteriorAluno(Aluno* anteAlu) {
+    pAnteriorAluno = anteAlu;
+}
+
+Aluno* ElementoAluno::getAnteriorAluno() {
+    return pAnteriorAluno;
+}

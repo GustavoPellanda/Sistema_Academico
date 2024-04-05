@@ -11,6 +11,9 @@ public:
     Aluno();
     ~Aluno();
 
+    void setAluno(Aluno* pAlu);
+    Aluno* getAluno();
+
     void setRegistroAcademico(int regisAcad);
     int getRegistroAcademico();
 };

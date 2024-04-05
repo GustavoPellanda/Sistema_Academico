@@ -13,6 +13,14 @@ Aluno::Aluno():Pessoa(){
 Aluno::~Aluno() {
 }
 
+void ElementoAluno::setAluno(Aluno* pAlu) {
+    pAluno = pAlu;
+}
+
+Aluno* ElementoAluno::getAluno() {
+    return pAluno;
+}
+
 void Aluno::setRegistroAcademico(int regisAcad) {
     registroAcademico = regisAcad;
 }

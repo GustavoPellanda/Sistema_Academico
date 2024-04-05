@@ -1,8 +1,7 @@
 #ifndef DISCIPLINA_H
 #define DISCIPLINA_H
 #include "Departamento.h"
-#include "Aluno.h"
-#include "ElementoAluno.h"
+#include "ListaAlunos.h"
 
 class Disciplina{
 private:
@@ -12,15 +11,12 @@ private:
     
     Departamento* pDepartamento;
 
-    // Próxima disciplina da lista:
+    // Referências à lista de disciplinas:
     Disciplina* pProximaDisciplina;
     Disciplina* pAnteriorDisciplina;
 
     // Lista de alunos da disciplina:
-    int numeroAlunos;
-    int countAlunos;
-    Aluno* pPrimeiroAluno;
-    Aluno* pUltimoAluno;
+    ListaAlunos* pListaAlunos;
 
 public:
     Disciplina();
@@ -40,10 +36,6 @@ public:
 
     void setAnteriorDisciplina(Disciplina* pAnteDisc);
     Disciplina* getAnteriorDisciplina();
-
-    void incluirAluno(Aluno* pAlu);
-    void listaAlunos();
-    void listaAlunosInvertido();
 };
 
 #endif
