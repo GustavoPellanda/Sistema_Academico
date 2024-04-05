@@ -1,5 +1,7 @@
 #ifndef DEPARTAMENTO_H
 #define DEPARTAMENTO_H 
+#include <cstring>
+#include <iostream>
 
 class Disciplina;
 class Universidade;

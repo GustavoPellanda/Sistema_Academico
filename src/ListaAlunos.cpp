@@ -2,7 +2,7 @@
 #include <cstring>
 #include <iostream>
 
-ListaAlunos::ListaAlunos(int numAlu, const char nomeAlu){
+ListaAlunos::ListaAlunos(int numAlu, const char* nomeAlu){
     countAlunos = 0;
     numeroAlunos = numAlu;
     strcpy(nome, nomeAlu);

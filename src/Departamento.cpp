@@ -1,17 +1,16 @@
 #include "Departamento.h"
-#include <cstring>
-#include <iostream>
+#include "Disciplina.h"
 
 using namespace std;
 
 Departamento::Departamento() {
-    pPrimeiraDisciplina = NULL;
-    pUltimaDisciplina = NULL;
+    pPrimeiraDisciplina = nullptr;
+    pUltimaDisciplina = nullptr;
 }
 
 Departamento::~Departamento() {
-    pPrimeiraDisciplina = NULL;
-    pUltimaDisciplina = NULL;
+    pPrimeiraDisciplina = nullptr;
+    pUltimaDisciplina = nullptr;
 }
 
 void Departamento::setNome(const char* nomeDept) {
@@ -31,7 +30,7 @@ Universidade* Departamento::getUniversidade() {
 }
 
 void Departamento::incluirDisciplina(Disciplina* pDis) {
-    if(pPrimeiraDisciplina == NULL) { // Lista vazia
+    if(pPrimeiraDisciplina == nullptr) { // Lista vazia
         pPrimeiraDisciplina = pDis;
         pUltimaDisciplina = pDis;
     }
@@ -45,7 +44,7 @@ void Departamento::incluirDisciplina(Disciplina* pDis) {
 void Departamento::listaDisciplinas()  {
     cout << "Disciplinas do departamento " << nome << ":\n";
     Disciplina* pAtual = pPrimeiraDisciplina;
-    while (pAtual != NULL) {
+    while (pAtual != nullptr) {
         cout << " - " << pAtual->getNome() << "\n";
         pAtual = pAtual->getProximaDisciplina();
     }
@@ -54,7 +53,7 @@ void Departamento::listaDisciplinas()  {
 void Departamento::listaDisciplinasInvertido() {
     cout << "Disciplinas do departamento " << nome << " em ordem invertida:\n";
     Disciplina* pAtual = pUltimaDisciplina; // Começa a partir da última disciplina
-    while (pAtual != NULL) {
+    while (pAtual != nullptr) {
         cout << " - " << pAtual->getNome() << "\n";
         pAtual = pAtual->getAnteriorDisciplina(); // Move para a disciplina anterior na lista
     }
