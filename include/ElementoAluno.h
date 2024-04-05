@@ -14,7 +14,7 @@ public:
     ~ElementoAluno();
 
     void setAluno(Aluno* pAlu);
-    Aluno* getAluno ( );
+    Aluno* getAluno();
 
     void setProximoAluno(ElementoAluno* proxAlu);
     ElementoAluno* getProximoAluno();

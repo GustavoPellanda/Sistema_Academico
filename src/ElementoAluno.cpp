@@ -15,7 +15,7 @@ void ElementoAluno::setAluno(Aluno* pAlu){
     pAluno = pAlu;
 }
 
-ElementoAluno::getAluno(){
+Aluno* ElementoAluno::getAluno(){
     return pAluno;
 }
 
