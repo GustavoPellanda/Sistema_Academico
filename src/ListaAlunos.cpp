@@ -37,8 +37,8 @@ void ListaAlunos::incluirAluno(Aluno* pAlu) {
     pAux->setAluno(pAuxAluno);
 
     if(pPrimeiroAluno == NULL){ // Lista vazia
-        pPrimeiroAluno = pAuxElemento;
-        pUltimoAluno= pAuxElemento;
+        pPrimeiroAluno = pAux;
+        pUltimoAluno= pAux;
     }
     else{ // Insere o novo objeto na lista:
         pUltimoAluno->setProximoAluno(pAux);
