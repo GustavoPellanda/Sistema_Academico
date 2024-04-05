@@ -34,7 +34,7 @@ void ListaAlunos::incluirAluno(Aluno* pAlu) {
 
     // Cria o objeto para o novo aluno:
     ElementoAluno* pAux = new ElementoAluno();
-    pAux->setAluno(pAuxAluno);
+    pAux->setAluno(pAlu);
 
     if(pPrimeiroAluno == NULL){ // Lista vazia
         pPrimeiroAluno = pAux;
