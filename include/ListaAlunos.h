@@ -10,8 +10,8 @@ private:
     int countAlunos;
     const char nome[150];
 
-    Aluno* pPrimeiroAluno;
-    Aluno* pUltimoAluno;
+    ElementoAluno* pPrimeiroAluno;
+    ElementoAluno* pUltimoAluno;
 
 public:
     ListaAlunos(int numAlu, const char* nomeAlu);

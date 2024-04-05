@@ -2,6 +2,7 @@
 #define DISCIPLINA_H
 #include "Departamento.h"
 #include "ListaAlunos.h"
+#include "Aluno.h"
 
 class Disciplina{
 private:

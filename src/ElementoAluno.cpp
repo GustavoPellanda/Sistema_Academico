@@ -7,21 +7,30 @@ ElementoAluno::ElementoAluno() {
 }
 
 ElementoAluno::~ElementoAluno() {
-    
+    pProximoAluno = NULL;
+    pAnteriorAluno = NULL;
 }
 
-void ElementoAluno::setProximoAluno(Aluno* proxAlu) {
+void ElementoAluno::setAluno(Aluno* pAlu){
+    pAluno = pAlu;
+}
+
+ElementoAluno::getAluno(){
+    return pAluno;
+}
+
+void ElementoAluno::setProximoAluno(ElementoAluno* proxAlu) {
     pProximoAluno = proxAlu;
 }
 
-Aluno* ElementoAluno::getProximoAluno() {
+ElementoAluno* ElementoAluno::getProximoAluno() {
     return pProximoAluno;
 }
 
-void ElementoAluno::setAnteriorAluno(Aluno* anteAlu) {
+void ElementoAluno::setAnteriorAluno(ElementoAluno* anteAlu) {
     pAnteriorAluno = anteAlu;
 }
 
-Aluno* ElementoAluno::getAnteriorAluno() {
+ElementoAluno* ElementoAluno::getAnteriorAluno() {
     return pAnteriorAluno;
 }

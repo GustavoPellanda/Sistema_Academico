@@ -6,18 +6,21 @@
 class ElementoAluno {
 private:
     Aluno* pAluno;
-    Aluno* pProximoAluno;
-    Aluno* pAnteriorAluno;
+    ElementoAluno* pProximoAluno;
+    ElementoAluno* pAnteriorAluno;
 
 public:
     ElementoAluno();
     ~ElementoAluno();
 
-    void setProximoAluno(Aluno* proxAlu);
-    Aluno* getProximoAluno();
+    void setAluno(Aluno* pAlu);
+    Aluno* getAluno ( );
 
-    void setAnteriorAluno(Aluno* anteAlu);
-    Aluno* getAnteriorAluno();
+    void setProximoAluno(ElementoAluno* proxAlu);
+    ElementoAluno* getProximoAluno();
+
+    void setAnteriorAluno(ElementoAluno* anteAlu);
+    ElementoAluno* getAnteriorAluno();
 };
 
 #endif

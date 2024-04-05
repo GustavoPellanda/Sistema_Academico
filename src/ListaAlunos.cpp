@@ -1,5 +1,5 @@
 #include "ListaAlunos.h"
-#include <string>
+#include <cstring>
 #include <iostream>
 
 ListaAlunos::ListaAlunos(int numAlu, const char* nomeAlu){
