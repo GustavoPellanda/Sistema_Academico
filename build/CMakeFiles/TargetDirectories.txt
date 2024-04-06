@@ -1,3 +1,0 @@
-C:/Users/gusfi/Sistema_Academico/build/CMakeFiles/TESTE.dir
-C:/Users/gusfi/Sistema_Academico/build/CMakeFiles/edit_cache.dir
-C:/Users/gusfi/Sistema_Academico/build/CMakeFiles/rebuild_cache.dir
