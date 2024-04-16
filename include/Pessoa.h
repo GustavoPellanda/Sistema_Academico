@@ -5,7 +5,7 @@
 class Pessoa { 
 protected:
     int dia, mes, ano, idade;
-    char nome[30];
+    char nome[150];
 
 public:
     Pessoa(int diaNascimento, int mesNascimento, int anoNascimento, const char* nomePessoa = "");
