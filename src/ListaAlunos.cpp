@@ -47,6 +47,7 @@ void ListaAlunos::incluirAluno(Aluno* pAlu) {
     }
 
     countAlunos++;
+    pAlu->setID = countAlunos;
 }
 
 void ListaAlunos::listarAlunos() {
