@@ -1,7 +1,9 @@
 #include "Menu.h"
 #include "Aluno.h"
+#include "ElementoAluno.h"
 #include <cstring>
 #include <iostream>
+#include <fstream>
 
 int Menu::countAlunos = 0;
 
@@ -60,9 +62,32 @@ void Menu::cadastrarAluno(){
 }
 
 void Menu::gravarAlunos(){
-    // Todo
+    ofstream GravadorAlunos("alunos.dat", ios::out);
+    
+    if (!GravadorAlunos){
+        cerr << "Arquivo não pode ser aberto" << endl;
+        fflush(stdin);
+        getchar();
+        return;
+    }
+    
+    Aluno* pAluno = NULL;
+    ElementoAluno* pElementoAluno = NULL;
+    
+    // Percorre a lista de elementos alunos, buscando o aluno em si para cada item:
+    pElementoAluno = pPrimeiroAluno;
+    while(pElementoAluno != NULL){
+        pAluno = pElementoAluno->getAluno();
+        GravadorAlunos 
+            << pAluno->getld() << '' 
+            << pAluno->getRA() << '' 
+            << pAluno->getNome() << endl;
+        pElementoAluno = pElementoAluno->pProximoAluno;
+    }
+    
+    GravadorAlunos.close();
 }
 
 void Menu::recuperarAlunos(){
-    // Todo
+    // To do
 }

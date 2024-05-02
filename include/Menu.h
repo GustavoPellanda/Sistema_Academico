@@ -4,10 +4,10 @@
 class Menu {
 private:
     static int countAlunos;
-    // static int countProfessores = 0;
-    // static int countDisciplinas = 0;
-    // static int countDepartamentos = 0;
-    // static int countUniversidades = 0;
+    // static int countProfessores;
+    // static int countDisciplinas;
+    // static int countDepartamentos;
+    // static int countUniversidades;
 
 public:
     Menu();
