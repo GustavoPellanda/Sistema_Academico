@@ -17,6 +17,8 @@ public:
     ListaAlunos(int numAlu, const char* nomeAlu);
     ~ListaAlunos();
 
+    ElementoAluno* getPrimeiroAluno();
+
     void incluirAluno(Aluno* pAlu);
     void listarAlunos();
     void listarAlunosInvertido();

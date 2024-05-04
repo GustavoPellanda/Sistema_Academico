@@ -1,6 +1,7 @@
 #include "Menu.h"
 #include "Aluno.h"
 #include "ElementoAluno.h"
+#include "ListaAlunos.h"
 #include <cstring>
 #include <iostream>
 #include <fstream>
@@ -75,14 +76,14 @@ void Menu::gravarAlunos(){
     ElementoAluno* pElementoAluno = NULL;
     
     // Percorre a lista de elementos alunos, buscando o aluno em si para cada item:
-    pElementoAluno = pPrimeiroAluno;
+    pElementoAluno = ; // Pegar o primeiro aluno da lista
     while(pElementoAluno != NULL){
         pAluno = pElementoAluno->getAluno();
         GravadorAlunos 
-            << pAluno->getld() << '' 
-            << pAluno->getRA() << '' 
+            << pAluno->getID() << " "
+            << pAluno->getRegistroAcademico() << " "
             << pAluno->getNome() << endl;
-        pElementoAluno = pElementoAluno->pProximoAluno;
+        pElementoAluno->getProximoAluno();
     }
     
     GravadorAlunos.close();

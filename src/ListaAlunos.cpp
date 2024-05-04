@@ -25,6 +25,10 @@ ListaAlunos::~ListaAlunos(){
     pUltimoAluno = NULL;
 }
 
+ElementoAluno* ListaAlunos::getPrimeiroAluno() {
+    return pPrimeiroAluno;
+}
+
 void ListaAlunos::incluirAluno(Aluno* pAlu) {
     if(pAlu == NULL) return;
     if(countAlunos >= numeroAlunos){
@@ -47,7 +51,7 @@ void ListaAlunos::incluirAluno(Aluno* pAlu) {
     }
 
     countAlunos++;
-    pAlu->setID = countAlunos;
+    pAlu->setID(countAlunos);
 }
 
 void ListaAlunos::listarAlunos() {
