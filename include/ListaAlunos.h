@@ -8,13 +8,12 @@ class ListaAlunos{
 private:
     int numeroAlunos;
     int countAlunos;
-    char nome[150];
 
     ElementoAluno* pPrimeiroAluno;
     ElementoAluno* pUltimoAluno;
 
 public:
-    ListaAlunos(int numAlu, const char* nomeAlu);
+    ListaAlunos(int numAlu);
     ~ListaAlunos();
 
     ElementoAluno* getPrimeiroAluno();

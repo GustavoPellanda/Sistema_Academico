@@ -2,10 +2,9 @@
 #include <cstring>
 #include <iostream>
 
-ListaAlunos::ListaAlunos(int numAlu, const char* nomeAlu){
+ListaAlunos::ListaAlunos(int numAlu){
     countAlunos = 0;
     numeroAlunos = numAlu;
-    strcpy(nome, nomeAlu);
     pPrimeiroAluno = NULL;
     pUltimoAluno = NULL;
 }

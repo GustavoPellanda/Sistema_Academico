@@ -57,4 +57,10 @@ void Principal::Executar(){
 
     CompSci.listaDisciplinas();
     CompSci.listaDisciplinasInvertido();
+
+    AlunosUTFPR.incluirAluno(&Gustavo);
+    AlunosUTFPR.incluirAluno(&Aluno1);
+    AlunosUTFPR.incluirAluno(&Aluno2);
+    AlunosUTFPR.incluirAluno(&Aluno3);
+    AlunosUTFPR.incluirAluno(&Aluno4);
 }

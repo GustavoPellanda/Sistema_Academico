@@ -6,6 +6,7 @@
 #include "Aluno.h"
 #include "Departamento.h"
 #include "Disciplina.h"
+#include "ListaAlunos.h"
 
 class Principal {
 private:
@@ -14,8 +15,10 @@ private:
     Professor Newton, Einstein;
     Universidade Cambridge, Princeton;
     Departamento FisicaCambridge, MatematicaCambridge,FisicaPrinceton, MatematicaPrinceton, CompSci;
-    Aluno Gustavo;
     Disciplina CircuitosDigitais, SistemasEmbarcados, RedesNeurais, SistemasInteligentes;
+    
+    Aluno Gustavo, Aluno1, Aluno2, Aluno3, Aluno4;
+    ListaAlunos AlunosUTFPR = ListaAlunos(10);
 
 public:
     Principal();

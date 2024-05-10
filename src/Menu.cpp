@@ -60,6 +60,8 @@ void Menu::cadastrarAluno(){
     
     pNovoAluno->setNome(const_cast<char*>(nomeNovoAluno.c_str()));
     pNovoAluno->setRegistroAcademico(raNovoAluno);
+
+    // FAZER: Escolher em qual lista o aluno será incluso
 }
 
 void Menu::gravarAlunos(){
@@ -76,7 +78,7 @@ void Menu::gravarAlunos(){
     ElementoAluno* pElementoAluno = NULL;
     
     // Percorre a lista de elementos alunos, buscando o aluno em si para cada item:
-    pElementoAluno = ; // Pegar o primeiro aluno da lista
+    pElementoAluno = NULL; // FAZER: Pegar o primeiro aluno da lista
     while(pElementoAluno != NULL){
         pAluno = pElementoAluno->getAluno();
         GravadorAlunos 
