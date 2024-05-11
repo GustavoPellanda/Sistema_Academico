@@ -1,10 +1,9 @@
 #include "Pessoa.h"
 #include <iostream>
-#include <cstring>
 
 using namespace std;
 
-Pessoa::Pessoa(int diaNascimento, int mesNascimento, int anoNascimento, const char* nomePessoa){
+Pessoa::Pessoa(int diaNascimento, int mesNascimento, int anoNascimento, const string& nomePessoa){
     inicializa(diaNascimento, mesNascimento, anoNascimento, nomePessoa);
 }
 
@@ -13,15 +12,14 @@ Pessoa::Pessoa(){
 }
 
 Pessoa::~Pessoa(){
-
 }
 
-void Pessoa::inicializa(int diaNascimento, int mesNascimento, int anoNascimento, const char* nomePessoa){
+void Pessoa::inicializa(int diaNascimento, int mesNascimento, int anoNascimento, const string& nomePessoa){
     dia = diaNascimento;
     mes = mesNascimento;
     ano = anoNascimento;
     idade = -1;
-    strcpy(nome, nomePessoa);
+    nome = nomePessoa;
 }
 
 void Pessoa::calculaIdade(int diaAtual, int mesAtual, int anoAtual){
@@ -29,11 +27,11 @@ void Pessoa::calculaIdade(int diaAtual, int mesAtual, int anoAtual){
     if (mesAtual < mes || (mesAtual == mes && diaAtual < dia)) idade--;
 }
 
-void Pessoa::setNome(char* nomePessoa){
-    strcpy(nome, nomePessoa);
+void Pessoa::setNome(const string& nomePessoa){
+    nome = nomePessoa;
 }
-    
-char* Pessoa::getNome(){
+
+string Pessoa::getNome(){
     return nome;
 }
 
@@ -41,6 +39,6 @@ int Pessoa::getIdade(){
     return idade;
 }
 
-void Pessoa::imprimeIdade(){
+void Pessoa::imprimeIdade() {
     cout << nome << " possui " << idade << " anos de idade" << endl;
 }

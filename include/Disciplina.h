@@ -40,7 +40,7 @@ public:
 
     void incluirAluno(Aluno* pAlu);
     void listarAlunos();
-    void listarAlunosInvertido();
+    // void listarAlunosInvertido();
 };
 
 #endif

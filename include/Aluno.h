@@ -1,6 +1,7 @@
 #ifndef ALUNO_H
 #define ALUNO_H
 #include "Pessoa.h"
+#include <string>
 
 class Aluno : public Pessoa {
 private:
@@ -8,7 +9,7 @@ private:
     int ID;
 
 public:
-    Aluno(int diaNascimento, int mesNascimento, int anoNascimento, const char* nomePessoa);
+    Aluno(int diaNascimento, int mesNascimento, int anoNascimento, const std::string& nomePessoa);
     Aluno();
     ~Aluno();
 

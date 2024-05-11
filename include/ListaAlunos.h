@@ -20,7 +20,6 @@ public:
 
     void incluirAluno(Aluno* pAlu);
     void listarAlunos();
-    void listarAlunosInvertido();
 };
 
 #endif

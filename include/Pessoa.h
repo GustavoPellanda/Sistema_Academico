@@ -1,22 +1,25 @@
 #ifndef PESSOA_H
 #define PESSOA_H
-#include "Universidade.h" 
+#include "Universidade.h"
+#include <string>
 
-class Pessoa { 
+using namespace std;
+
+class Pessoa {
 protected:
     int dia, mes, ano, idade;
-    char nome[150];
+    string nome;
 
 public:
-    Pessoa(int diaNascimento, int mesNascimento, int anoNascimento, const char* nomePessoa = "");
+    Pessoa(int diaNascimento, int mesNascimento, int anoNascimento, const string& nomePessoa = "");
     Pessoa();
     ~Pessoa();
 
-    void inicializa(int diaNascimento, int mesNascimento, int anoNascimento, const char* nomePessoa = "");
+    void inicializa(int diaNascimento, int mesNascimento, int anoNascimento, const string& nomePessoa = "");
     void calculaIdade(int diaAtual, int mesAtual, int anoAtual);
-    
-    void setNome(char* nomePessoa);
-    char* getNome();
+
+    void setNome(const string& nomePessoa); // Changed parameter type
+    string getNome(); // Changed return type
 
     int getIdade();
     void imprimeIdade();

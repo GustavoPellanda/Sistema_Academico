@@ -54,9 +54,12 @@ void ListaAlunos::incluirAluno(Aluno* pAlu) {
 }
 
 void ListaAlunos::listarAlunos() {
-    // Fazer
-}
+    Aluno* pAuxAluno = NULL;
+    ElementoAluno* pAuxElAluno = getPrimeiroAluno();
 
-void ListaAlunos::listarAlunosInvertido() {
-    // Fazer
+    while(pAuxElAluno != NULL){
+        pAuxAluno = pAuxElAluno->getAluno(); 
+        cout << "Aluno " << pAuxAluno->getID() << ": " << pAuxAluno->getNome() << endl;
+        pAuxElAluno = pAuxElAluno->getProximoAluno();
+    }
 }

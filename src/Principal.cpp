@@ -43,6 +43,7 @@ void Principal::Executar(){
     Cambridge.listaDepartamentos();
     Princeton.listaDepartamentos();
 
+    Gustavo.setNome("Gustavo");
     Gustavo.setRegistroAcademico(2090740);
 
     CircuitosDigitais.setNome("CircuitosDigitais");
@@ -58,9 +59,16 @@ void Principal::Executar(){
     CompSci.listaDisciplinas();
     CompSci.listaDisciplinasInvertido();
 
+    Aluno1.setNome("Roger");
+    Aluno2.setNome("Helena");
+    Aluno3.setNome("Ricardo");
+    Aluno4.setNome("Giovana");
+
     AlunosUTFPR.incluirAluno(&Gustavo);
     AlunosUTFPR.incluirAluno(&Aluno1);
     AlunosUTFPR.incluirAluno(&Aluno2);
     AlunosUTFPR.incluirAluno(&Aluno3);
     AlunosUTFPR.incluirAluno(&Aluno4);
+
+    AlunosUTFPR.listarAlunos();
 }

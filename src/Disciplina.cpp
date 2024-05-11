@@ -68,6 +68,6 @@ void Disciplina::listarAlunos(){
     pListaAlunos->listarAlunos();
 }
 
-void Disciplina::listarAlunosInvertido(){
-    pListaAlunos->listarAlunosInvertido();
-}
+// void Disciplina::listarAlunosInvertido(){
+//     pListaAlunos->listarAlunosInvertido();
+// }
