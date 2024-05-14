@@ -71,4 +71,7 @@ void Principal::Executar(){
     AlunosUTFPR.incluirAluno(&Aluno4);
 
     AlunosUTFPR.listarAlunos();
+
+    MenuPrincipal.imprimirMenu();
+    MenuPrincipal.selecionaOpcoesMenu();
 }

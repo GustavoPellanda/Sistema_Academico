@@ -7,6 +7,7 @@
 #include "Departamento.h"
 #include "Disciplina.h"
 #include "ListaAlunos.h"
+#include "Menu.h"
 
 class Principal {
 private:
@@ -19,6 +20,8 @@ private:
     
     Aluno Gustavo, Aluno1, Aluno2, Aluno3, Aluno4;
     ListaAlunos AlunosUTFPR = ListaAlunos(10);
+
+    Menu MenuPrincipal;
 
 public:
     Principal();

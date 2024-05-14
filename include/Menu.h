@@ -1,13 +1,11 @@
 #ifndef MENU_H
 #define MENU_H 
+#include "ListaAlunos.h"
 
 class Menu {
 private:
     static int countAlunos;
-    // static int countProfessores;
-    // static int countDisciplinas;
-    // static int countDepartamentos;
-    // static int countUniversidades;
+    ListaAlunos AlunosMenu = ListaAlunos(25);
 
 public:
     Menu();
@@ -17,22 +15,8 @@ public:
     void selecionaOpcoesMenu();
 
     void cadastrarAluno();
-    // void cadastrarProfessor();
-    // void cadastrarDisciplina();
-    // void cadastrarDepartamento();
-    // void cadastrarUniversidade();
-
     void gravarAlunos();
-    // void gravarProfessores();
-    // void gravarDisciplinas();
-    // void gravarDepartamentos();
-    // void gravarUniversidades();
-
     void recuperarAlunos();
-    // void recuperarProfessores();
-    // void recuperarDisciplinas();
-    // void recuperarDepartamentos();
-    // void recuperarUniversidades();
 };
 
 #endif
