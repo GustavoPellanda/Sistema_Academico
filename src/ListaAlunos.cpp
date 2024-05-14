@@ -2,10 +2,9 @@
 #include <cstring>
 #include <iostream>
 
-ListaAlunos::ListaAlunos(int numAlu, const char* nomeAlu){
+ListaAlunos::ListaAlunos(int numAlu){
     countAlunos = 0;
     numeroAlunos = numAlu;
-    strcpy(nome, nomeAlu);
     pPrimeiroAluno = NULL;
     pUltimoAluno = NULL;
 }
@@ -23,6 +22,10 @@ ListaAlunos::~ListaAlunos(){
 
     pPrimeiroAluno = NULL;
     pUltimoAluno = NULL;
+}
+
+ElementoAluno* ListaAlunos::getPrimeiroAluno() {
+    return pPrimeiroAluno;
 }
 
 void ListaAlunos::incluirAluno(Aluno* pAlu) {
@@ -47,12 +50,16 @@ void ListaAlunos::incluirAluno(Aluno* pAlu) {
     }
 
     countAlunos++;
+    pAlu->setID(countAlunos);
 }
 
 void ListaAlunos::listarAlunos() {
-    // Fazer
-}
+    Aluno* pAuxAluno = NULL;
+    ElementoAluno* pAuxElAluno = getPrimeiroAluno();
 
-void ListaAlunos::listarAlunosInvertido() {
-    // Fazer
+    while(pAuxElAluno != NULL){
+        pAuxAluno = pAuxElAluno->getAluno(); 
+        cout << "Aluno " << pAuxAluno->getID() << ": " << pAuxAluno->getNome() << endl;
+        pAuxElAluno = pAuxElAluno->getProximoAluno();
+    }
 }
