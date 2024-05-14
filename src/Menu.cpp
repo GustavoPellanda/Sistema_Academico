@@ -5,6 +5,7 @@
 #include <cstring>
 #include <iostream>
 #include <fstream>
+#include <cstdlib>
 
 int Menu::countAlunos = 0;
 
@@ -17,12 +18,13 @@ Menu::~Menu(){
 }
 
 void Menu::imprimirMenu(){
+    cout << endl;
     cout << "Menu:" << endl;
     cout << "1. Cadastrar aluno" << endl;
     cout << "2. Gravar alunos" << endl;
     cout << "3. Recuperar alunos" << endl;
     cout << "4. Sair" << endl;
-    cout << "Escolha uma opção: ";
+    cout << "Escolha uma opcao: ";
 }
 
 void Menu::selecionaOpcoesMenu(){
@@ -40,9 +42,10 @@ void Menu::selecionaOpcoesMenu(){
             break;
         case 4:
             cout << "Saindo do programa..." << endl;
+            exit(0);
             break;
         default:
-            cout << "Opção inválida. Tente novamente." << endl;
+            cout << "Opcao invalida. Tente novamente." << endl;
     }
 }
 
@@ -52,7 +55,7 @@ void Menu::cadastrarAluno(){
 
     std::cout << "Digite o nome do aluno: ";
     std::cin >> nomeNovoAluno;
-    std::cout << "Digite o registro acadêmico do aluno: ";
+    std::cout << "Digite o registro academico do aluno: ";
     std::cin >> raNovoAluno;
     
     Aluno* pNovoAluno = new Aluno();
@@ -68,7 +71,7 @@ void Menu::gravarAlunos(){
     ofstream GravadorAlunos("alunos.dat", ios::out);
     
     if (!GravadorAlunos){
-        cerr << "Arquivo não pode ser aberto" << endl;
+        cerr << "Arquivo nao pode ser aberto" << endl;
         fflush(stdin);
         getchar();
         return;
@@ -85,7 +88,7 @@ void Menu::gravarAlunos(){
             << pAluno->getID() << " "
             << pAluno->getRegistroAcademico() << " "
             << pAluno->getNome() << endl;
-        pElementoAluno->getProximoAluno();
+       pElementoAluno = pElementoAluno->getProximoAluno();
     }
     
     GravadorAlunos.close();
