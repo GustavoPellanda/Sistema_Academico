@@ -70,7 +70,7 @@ void Menu::cadastrarAluno(){
 void Menu::gravarAlunos(){
     ofstream GravadorAlunos("alunos.dat", ios::out);
     
-    if (!GravadorAlunos){
+    if(!GravadorAlunos){
         cerr << "Arquivo nao pode ser aberto" << endl;
         fflush(stdin);
         getchar();
@@ -95,5 +95,33 @@ void Menu::gravarAlunos(){
 }
 
 void Menu::recuperarAlunos(){
-    // To do
+    ifstream RecuperadorAlunos("alunos.dat", ios::in);
+
+    if(!RecuperadorAlunos){
+        cerr << "Arquivo nao pode ser aberto" << endl;
+        fflush(stdin);
+        getchar();
+        return;
+    }
+
+    // FAZER: função para limpar a lista
+
+    while (!RecuperadorAlunos.eof()) {
+        Aluno* pAluno = NULL; 
+        int ID;
+        int RA;
+        string nome; 
+        RecuperadorAlunos >> ID >> RA >> nome;
+        
+        if(!nome.empty()){
+            pAluno = new Aluno();
+            pAluno->setID(ID);
+            pAluno->setRegistroAcademico(RA);
+            pAluno->setNome(nome);
+            AlunosMenu.incluirAluno(pAluno);
+        }
+    }
+
+    RecuperadorAlunos.close();
+    AlunosMenu.listarAlunos();
 }
