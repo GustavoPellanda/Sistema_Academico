@@ -111,10 +111,10 @@ void Menu::recuperarAlunos(){
         int ID;
         int RA;
         string nome; 
-        RecuperadorAlunos >> id >> RA >> nome;
+        RecuperadorAlunos >> ID >> RA >> nome;
         
         if(!nome.empty()){
-            pAluno = new Aluno(-1);
+            pAluno = new Aluno();
             pAluno->setID(ID);
             pAluno->setRegistroAcademico(RA);
             pAluno->setNome(nome);
@@ -123,4 +123,5 @@ void Menu::recuperarAlunos(){
     }
 
     RecuperadorAlunos.close();
+    AlunosMenu.listarAlunos();
 }
