@@ -24,9 +24,9 @@ public:
 
 template<class TIPO>
 ElementoLista<TIPO>::ElementoLista(){
-    pInfoElemento = NULL;
-    pProximoElemento = NULL;
-    pAnteriorElemento = NULL;
+    pInfoElemento = nullptr;
+    pProximoElemento = nullptr;
+    pAnteriorElemento = nullptr;
 }
 
 template<class TIPO>

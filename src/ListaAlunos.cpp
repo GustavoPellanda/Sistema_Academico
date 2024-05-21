@@ -10,12 +10,12 @@ ListaAlunos::ListaAlunos(int numAlu){
 }
     
 ListaAlunos::~ListaAlunos(){
-    ElementoAluno* pAux1 = pPrimeiroAluno, *pAux2;
+    ElementoLista<Aluno>* pAux1 = pPrimeiroAluno, *pAux2;
     pAux2 = pAux1;
 
     // Deleta um elemento aluno e segue para o próximo da lista:
     while(pAux1 != NULL){
-        pAux2 = pAux1->getProximoAluno();
+        pAux2 = pAux1->getProximoElemento();
         delete(pAux1);
         pAux1 = pAux2;
     }
@@ -24,7 +24,7 @@ ListaAlunos::~ListaAlunos(){
     pUltimoAluno = NULL;
 }
 
-ElementoAluno* ListaAlunos::getPrimeiroAluno() {
+ElementoLista<Aluno>* ListaAlunos::getPrimeiroAluno() {
     return pPrimeiroAluno;
 }
 
@@ -36,16 +36,16 @@ void ListaAlunos::incluirAluno(Aluno* pAlu) {
     }
 
     // Cria o objeto para o novo aluno:
-    ElementoAluno* pAux = new ElementoAluno();
-    pAux->setAluno(pAlu);
+    ElementoLista<Aluno>* pAux = new ElementoLista<Aluno>();
+    pAux->setInfo(pAlu);
 
     if(pPrimeiroAluno == NULL){ // Lista vazia
         pPrimeiroAluno = pAux;
         pUltimoAluno= pAux;
     }
     else{ // Insere o novo objeto na lista:
-        pUltimoAluno->setProximoAluno(pAux);
-        pAux->setAnteriorAluno(pUltimoAluno);
+        pUltimoAluno->setProximoElemento(pAux);
+        pAux->setAnteriorElemento(pUltimoAluno);
         pUltimoAluno = pAux;
     }
 
@@ -55,11 +55,11 @@ void ListaAlunos::incluirAluno(Aluno* pAlu) {
 
 void ListaAlunos::listarAlunos() {
     Aluno* pAuxAluno = NULL;
-    ElementoAluno* pAuxElAluno = getPrimeiroAluno();
+    ElementoLista<Aluno>* pAuxElAluno = getPrimeiroAluno();
 
     while(pAuxElAluno != NULL){
-        pAuxAluno = pAuxElAluno->getAluno(); 
+        pAuxAluno = pAuxElAluno->getInfo(); 
         cout << "Aluno " << pAuxAluno->getID() << ": " << pAuxAluno->getNome() << endl;
-        pAuxElAluno = pAuxElAluno->getProximoAluno();
+        pAuxElAluno = pAuxElAluno->getProximoElemento();
     }
 }

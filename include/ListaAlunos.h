@@ -1,7 +1,7 @@
 #ifndef LISTAALUNOS_H
 #define LISTAALUNOS_H
 
-#include "ElementoAluno.h"
+#include "ElementoDeUmaLista.h"
 #include "Aluno.h"
 
 class ListaAlunos{
@@ -9,14 +9,14 @@ private:
     int numeroAlunos;
     int countAlunos;
 
-    ElementoAluno* pPrimeiroAluno;
-    ElementoAluno* pUltimoAluno;
+    ElementoLista<Aluno>* pPrimeiroAluno;
+    ElementoLista<Aluno>* pUltimoAluno;
 
 public:
     ListaAlunos(int numAlu);
     ~ListaAlunos();
 
-    ElementoAluno* getPrimeiroAluno();
+    ElementoLista<Aluno>* getPrimeiroAluno();
 
     void incluirAluno(Aluno* pAlu);
     void listarAlunos();
